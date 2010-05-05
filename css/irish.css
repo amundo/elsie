@@ -1,0 +1,4 @@
+.description { width: 600px; float: right; font-size: 16px;}
+#lines { height: 75px; padding-top: 50px; position:relative;}
+#lines > span { display:none; font-size: 34px; font-style: italic; color: #333; font-family: 'Garamond Premier';}
+#ball { display:block; position:absolute; left: 0; top: 0; background: red; width: 10px; height: 10px; -moz-border-radius: 5px; text-indent: -999px; overflow:hidden; }

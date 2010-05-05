@@ -1,0 +1,56 @@
+body { 
+ margin: 0;
+ padding: 0;
+}
+
+#header  {
+  background: #ccc;
+  overflow:auto;
+  padding: .75em 1em;
+  border-bottom: 1px solid #333;
+  position: fixed;
+  height: 75px;
+  top:0;
+  width: 100%;
+  z-index:10;
+}
+
+input#line { 
+  width: 90%;
+  line-height: 130%; 
+  font-family: Gentium, sans-serif;
+  font-size: large;
+  padding: .25em;
+}
+
+#header a { 
+  cursor: pointer; 
+}
+
+#content { 
+  padding: 1em;
+  margin-top: 100px;
+  overflow:hidden;
+}
+
+#buttons { 
+ position: fixed;
+ bottom: 1em;
+ right: 1em;
+}
+
+#lines { 
+  z-index:0;
+  overflow:hidden;
+  margin-top: 50px;  
+  position:relative;
+}
+
+#lines > span { 
+  display:none; 
+  font-size: 34px; 
+  font-style: italic; 
+  color: #333; 
+  font-family: 'Garamond Premier';
+}
+
