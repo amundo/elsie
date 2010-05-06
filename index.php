@@ -1,3 +1,13 @@
+<?php
+ 
+   require('db.php'); 
+   $pdo = pdo();
+   $lines = array();
+   $sql = 'select * from lines order by start_time;' ;
+   foreach($pdo->query($sql) as $row){
+     $lines[] = $row;
+   }
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +28,7 @@
 <body>
 
 <div id="header">
-<audio controls="controls">
- <source src="audio/peq_001_1.wav">  
- <source src="audio/peq_001_1.mp3">  
+<audio src="audio/peq_001_1.wav" controls="controls">
 </audio>  
 
 <form action="save_line.php" method="post" id="editor">
@@ -30,8 +38,11 @@
 
 </div><!-- #header -->
 
+<div id="sidebar">
+  <?php require_once('list_audio.php') ?>
+</div>
 <div id="content">
-  <div id="lines">
+  <div style="display:none" id="heh">
       <span data-start="1" data-stop="5">This is February fourth, nineteen-eighty-two.</span> 
       <span data-start="5" data-stop="15">Uh, Mrs. Elsie Allen at Ukiah speaking in Southern Pomo.</span> 
       <span data-start="15" data-stop="20">Ready any time you are.</span> 
@@ -120,6 +131,15 @@
 <span data-stop="98.35020446777344" data-start="93.35020446777344">phala</span>
 <span data-stop="99.35419464111328" data-start="94.35419464111328">uh</span>
 </div>
+
+<div id="lines">
+<?php
+  foreach($lines as $row){
+   echo "<span data-start='{$row['start_time']}' data-stop='{$row['stop_time']}'>{$row['line']}</span>";
+  }
+?>
+</div>
+
 </div>
 <p id="buttons">
 <button id="view">view</button> | <a id="about" href="about.html">about</a>

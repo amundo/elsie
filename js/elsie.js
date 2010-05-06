@@ -62,16 +62,13 @@ $(function(){
     }
   )
 
-  /*
-  when you write a line:
-    get the previous data-stop
-    use that as data-start
-    get the currentTime
-    use that as data-stop
-    create a span
-    set data-start
-    set data-stop
-
-  */
+  $('#files p a').click(
+    function(){
+      var href = $(this).attr('href'); 
+      console.log('href: ' + href);
+      $('audio').get(0).load()
+      return false;
+    }
+  )
 
 })

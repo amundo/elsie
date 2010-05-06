@@ -54,3 +54,11 @@ input#line {
   font-family: 'Garamond Premier';
 }
 
+#sidebar { 
+  overflow: auto;
+  border-left: 1px solid black; 
+  padding: .5em;
+  width: 200px; 
+  float:right;
+  min-height; 400px;
+}
