@@ -1,9 +1,18 @@
 In which we discuss the sql challenge i face:
 
-In documentary linguistics, there is a principle that says "never erase anything."
+In documentary linguistics, there is a principle that says "never
+erase anything."
 
-The reason for this principle is that the process of writing down an unwritten lagnuage is inherently inaccurate, and linguists tends to vacillate in their transcriptions, as they struggle to figure out the sound system and so on.
+The reason for this principle is that the process of writing down
+an unwritten lagnuage is inherently inaccurate, and linguists tends
+to vacillate in their transcriptions, as they struggle to figure
+out the sound system and so on.
 
-Practically speaking, this means that in their field notebooks linguists a) write in ink and b) only indicate a correction by striking through old text, in such a way that it remains legible. 
+Practically speaking, this means that in their field notebooks
+linguists a) write in ink and b) only indicate a correction by
+striking through old text, in such a way that it remains legible.
 
-My challenge is to duplicate this policy digitally.  I'm currently building an audio/video transcription tool which emulates the process of fieldwork in some ways. It can currently accept transcribed lines, and then 
+My challenge is to duplicate this policy digitally.  I'm currently
+building an audio/video transcription tool which emulates the process
+of fieldwork in some ways. It can currently accept transcribed
+lines, and then

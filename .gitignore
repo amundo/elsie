@@ -3,3 +3,5 @@
 *.ogg
 irish/
 audio/
+*.pyc
+texts/

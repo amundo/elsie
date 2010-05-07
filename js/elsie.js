@@ -1,8 +1,9 @@
 $(function(){
 
+  /* subtitling */
   $(document).keypress(function(e){
     var audio = $('audio').get(0);
-    if(e.keyCode == 27) { 
+    if(e.keyCode == 27) {  // ESCAPE
      if (audio.paused) 
        audio.play()
      else
@@ -10,17 +11,19 @@ $(function(){
     }
   })
 
-  $('form#editor').submit(function(){
-    return false
-  });
+  $('form#editor').submit(function(){ return false });
   
-  $('input').keypress(function(e){
-    if(e.keyCode == 13) { 
+  $('input').keydown(function(e){
+
+ //   var code = (e.keyCode ? e.keyCode : e.which);
+  //  console.log(e.which);
+
+//    if(e.which == 47) {  // grave accent ` return false; } 
+
+    if(e.which == 13) { 
       var stopTime = $('audio').get(0).currentTime;
       var startTime = stopTime - 5;
-      $("<span/>", 
-        { text: $('input').val() }
-       )
+      $("<span/>", { text: $('input').val() })
         .attr('data-start', startTime)
         .attr('data-stop', stopTime)
         .appendTo('#lines');
@@ -51,6 +54,7 @@ $(function(){
     });
   });
 
+  /* viewing spans */
   $('#view').toggle(
     function(){
       $(this).text('hide');
@@ -62,11 +66,11 @@ $(function(){
     }
   )
 
+  /* choosing current audio */
   $('#files p a').click(
     function(){
       var href = $(this).attr('href'); 
-      console.log('href: ' + href);
-      $('audio').get(0).load()
+      $('audio').get(0).load(href)
       return false;
     }
   )

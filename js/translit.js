@@ -84,16 +84,20 @@ function convert(text, table) {
      function oswaltify(text){
 
        var oswalt = [
-         [ ":",  '·' ],
 
          /* glottalic consonants */
          [ "p\'",  'p\u0313'],
          //[ "7",  'ṭ' ],
          [ "s\'",  's\u0313'],
-         [ "t\\*",  't\u0323' ], // t, combining dot below
-         [ "t\u0323\'",  't\u0323\u0313'],
+         [ "d\\*",  'd\u0326' ], // d, combining comma below
+         [ "t\\*",  't\u0326' ], // t, combining comma below
+         [ "t\u0326\'",  't\u0326\u0313'],
          [ "t\'",  't\u0313'],
+         [ "zh", '\u0292'], // U+0292 ʒ LATIN SMALL LETTER EZH
+         [ "\u0292\\*", "\u0292\u0306"], // U+0306  ̆COMBINING BREVE
          [ "c\'",  'c\u0313'],
+         [ "c\\*", "c\u0306"], // U+0306  ̆COMBINING BREVE
+         [ "c\u0306\'", "c\u0306\u0313"], // U+0306  ̆COMBINING BREVE and U+0313 COMBINING COMMA ABOVE
          [ "k\'",  "k\u0313"],
          [ "q\'",  'q\u0313'],
          [ "\\$",  "s\u030C"],
@@ -108,9 +112,6 @@ function convert(text, table) {
          [ "o\'",  "o\u0301"],
          /* glottal stop */
          [ "\\\?",  'ʔ' ],
-         /* middot */
-         [ "\\*",  '\u00B7' ], // MIDDLE DOT 00B7
-
          /*[ "\u0024",  'š' ]
          */
         ]
