@@ -33,7 +33,7 @@
 <div id="lines">
 <?php
   foreach($lines as $row){
-   echo "<span data-start='{$row['start_time']}' data-stop='{$row['stop_time']}'>{$row['line']}</span>";
+   echo "<span data-start='{$row['start_time']}' data-stop='{$row['stop_time']}'> {$row['line']}</span>";
   }
 ?>
 </div>

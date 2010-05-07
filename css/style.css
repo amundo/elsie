@@ -19,7 +19,7 @@ body {
 input#line { 
   width: 90%;
   line-height: 130%; 
-  font-family: Gentium, sans-serif;
+  font-family: Gentium;
   font-size: large;
   padding: .25em;
 }
@@ -50,9 +50,7 @@ input#line {
 #lines > span { 
   display:none; 
   font-size: 34px; 
-  font-style: italic; 
   color: #333; 
-  font-family: 'Garamond Premier';
 }
 
 #sidebar { 

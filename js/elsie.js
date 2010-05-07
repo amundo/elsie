@@ -1,6 +1,6 @@
 $(function(){
 
-  /* subtitling */
+  /* playback */
   $(document).keypress(function(e){
     var audio = $('audio').get(0);
     if(e.keyCode == 27) {  // ESCAPE
@@ -11,6 +11,7 @@ $(function(){
     }
   })
 
+  /* prevent form redirect */
   $('form#editor').submit(function(){ return false });
   
   $('input').keydown(function(e){
