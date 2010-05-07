@@ -5,3 +5,4 @@ irish/
 audio/
 *.pyc
 texts/
+db/transcripts.db
