@@ -68,6 +68,11 @@ $(function(){
   )
 
   /* choosing current audio */
+  $('#files p a').click( function(){
+    $('audio').replaceWith($('<audio/>', {'src':$(this).attr('href'), 'controls':'controls'}))  
+    return false;
+  })
+/*
   $('#files p a').click(
     function(){
       var href = $(this).attr('href'); 
@@ -75,5 +80,6 @@ $(function(){
       return false;
     }
   )
+*/
 
 })
